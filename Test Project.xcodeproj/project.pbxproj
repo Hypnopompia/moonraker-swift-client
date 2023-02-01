@@ -16,6 +16,8 @@
 		5804C2F329809BAB00DE121A /* Test_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5804C2F229809BAB00DE121A /* Test_ProjectTests.swift */; };
 		5804C2FD29809BAB00DE121A /* Test_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5804C2FC29809BAB00DE121A /* Test_ProjectUITests.swift */; };
 		5804C2FF29809BAB00DE121A /* Test_ProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5804C2FE29809BAB00DE121A /* Test_ProjectUITestsLaunchTests.swift */; };
+		58CCBA5F2989E59E00D4C41F /* JsonRPC in Frameworks */ = {isa = PBXBuildFile; productRef = 58CCBA5E2989E59E00D4C41F /* JsonRPC */; };
+		58CCBA622989F27B00D4C41F /* Serializable in Frameworks */ = {isa = PBXBuildFile; productRef = 58CCBA612989F27B00D4C41F /* Serializable */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58CCBA5F2989E59E00D4C41F /* JsonRPC in Frameworks */,
+				58CCBA622989F27B00D4C41F /* Serializable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +155,10 @@
 			dependencies = (
 			);
 			name = "Test Project";
+			packageProductDependencies = (
+				58CCBA5E2989E59E00D4C41F /* JsonRPC */,
+				58CCBA612989F27B00D4C41F /* Serializable */,
+			);
 			productName = "Test Project";
 			productReference = 5804C2D829809BAA00DE121A /* Test Project.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +231,10 @@
 				Base,
 			);
 			mainGroup = 5804C2CF29809BAA00DE121A;
+			packageReferences = (
+				58CCBA5D2989E59E00D4C41F /* XCRemoteSwiftPackageReference "JsonRPC.swift" */,
+				58CCBA602989F27B00D4C41F /* XCRemoteSwiftPackageReference "Serializable.swift" */,
+			);
 			productRefGroup = 5804C2D929809BAA00DE121A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -612,6 +624,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		58CCBA5D2989E59E00D4C41F /* XCRemoteSwiftPackageReference "JsonRPC.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tesseract-one/JsonRPC.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.1;
+			};
+		};
+		58CCBA602989F27B00D4C41F /* XCRemoteSwiftPackageReference "Serializable.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tesseract-one/Serializable.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		58CCBA5E2989E59E00D4C41F /* JsonRPC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58CCBA5D2989E59E00D4C41F /* XCRemoteSwiftPackageReference "JsonRPC.swift" */;
+			productName = JsonRPC;
+		};
+		58CCBA612989F27B00D4C41F /* Serializable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58CCBA602989F27B00D4C41F /* XCRemoteSwiftPackageReference "Serializable.swift" */;
+			productName = Serializable;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		5804C2DF29809BAA00DE121A /* Test_Project.xcdatamodeld */ = {
