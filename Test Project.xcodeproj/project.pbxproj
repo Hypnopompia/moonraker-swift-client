@@ -16,8 +16,11 @@
 		5804C2F329809BAB00DE121A /* Test_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5804C2F229809BAB00DE121A /* Test_ProjectTests.swift */; };
 		5804C2FD29809BAB00DE121A /* Test_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5804C2FC29809BAB00DE121A /* Test_ProjectUITests.swift */; };
 		5804C2FF29809BAB00DE121A /* Test_ProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5804C2FE29809BAB00DE121A /* Test_ProjectUITestsLaunchTests.swift */; };
-		58CCBA5F2989E59E00D4C41F /* JsonRPC in Frameworks */ = {isa = PBXBuildFile; productRef = 58CCBA5E2989E59E00D4C41F /* JsonRPC */; };
-		58CCBA622989F27B00D4C41F /* Serializable in Frameworks */ = {isa = PBXBuildFile; productRef = 58CCBA612989F27B00D4C41F /* Serializable */; };
+		589C6CE4298A038B00D1DDC3 /* JsonRPC in Frameworks */ = {isa = PBXBuildFile; productRef = 589C6CE3298A038B00D1DDC3 /* JsonRPC */; };
+		589C6CE6298A038B00D1DDC3 /* JsonRPCSerializable in Frameworks */ = {isa = PBXBuildFile; productRef = 589C6CE5298A038B00D1DDC3 /* JsonRPCSerializable */; };
+		58DC4FC2298B433A00045B6E /* ProcStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC4FC1298B433A00045B6E /* ProcStat.swift */; };
+		58DC4FC5298B4DD100045B6E /* ServerWebsocketId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC4FC4298B4DD100045B6E /* ServerWebsocketId.swift */; };
+		58DC4FC8298B4E0A00045B6E /* ServerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC4FC7298B4E0A00045B6E /* ServerInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		5804C2F829809BAB00DE121A /* Test ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Test ProjectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5804C2FC29809BAB00DE121A /* Test_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_ProjectUITests.swift; sourceTree = "<group>"; };
 		5804C2FE29809BAB00DE121A /* Test_ProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_ProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		58DC4FC1298B433A00045B6E /* ProcStat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcStat.swift; sourceTree = "<group>"; };
+		58DC4FC4298B4DD100045B6E /* ServerWebsocketId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerWebsocketId.swift; sourceTree = "<group>"; };
+		58DC4FC7298B4E0A00045B6E /* ServerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58CCBA5F2989E59E00D4C41F /* JsonRPC in Frameworks */,
-				58CCBA622989F27B00D4C41F /* Serializable in Frameworks */,
+				589C6CE4298A038B00D1DDC3 /* JsonRPC in Frameworks */,
+				589C6CE6298A038B00D1DDC3 /* JsonRPCSerializable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +109,8 @@
 		5804C2DA29809BAA00DE121A /* Test Project */ = {
 			isa = PBXGroup;
 			children = (
+				58DC4FC3298B4DB500045B6E /* Responses */,
+				58DC4FC0298B3DF200045B6E /* Notifications */,
 				5804C2DB29809BAA00DE121A /* Test_ProjectApp.swift */,
 				5804C2DD29809BAA00DE121A /* Persistence.swift */,
 				5804C2E229809BAA00DE121A /* ContentView.swift */,
@@ -139,6 +147,23 @@
 			path = "Test ProjectUITests";
 			sourceTree = "<group>";
 		};
+		58DC4FC0298B3DF200045B6E /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				58DC4FC1298B433A00045B6E /* ProcStat.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		58DC4FC3298B4DB500045B6E /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				58DC4FC4298B4DD100045B6E /* ServerWebsocketId.swift */,
+				58DC4FC7298B4E0A00045B6E /* ServerInfo.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,8 +181,8 @@
 			);
 			name = "Test Project";
 			packageProductDependencies = (
-				58CCBA5E2989E59E00D4C41F /* JsonRPC */,
-				58CCBA612989F27B00D4C41F /* Serializable */,
+				589C6CE3298A038B00D1DDC3 /* JsonRPC */,
+				589C6CE5298A038B00D1DDC3 /* JsonRPCSerializable */,
 			);
 			productName = "Test Project";
 			productReference = 5804C2D829809BAA00DE121A /* Test Project.app */;
@@ -232,8 +257,7 @@
 			);
 			mainGroup = 5804C2CF29809BAA00DE121A;
 			packageReferences = (
-				58CCBA5D2989E59E00D4C41F /* XCRemoteSwiftPackageReference "JsonRPC.swift" */,
-				58CCBA602989F27B00D4C41F /* XCRemoteSwiftPackageReference "Serializable.swift" */,
+				589C6CE2298A038B00D1DDC3 /* XCRemoteSwiftPackageReference "JsonRPC.swift" */,
 			);
 			productRefGroup = 5804C2D929809BAA00DE121A /* Products */;
 			projectDirPath = "";
@@ -277,8 +301,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58DC4FC8298B4E0A00045B6E /* ServerInfo.swift in Sources */,
 				5804C2E129809BAA00DE121A /* Test_Project.xcdatamodeld in Sources */,
+				58DC4FC5298B4DD100045B6E /* ServerWebsocketId.swift in Sources */,
 				5804C2DC29809BAA00DE121A /* Test_ProjectApp.swift in Sources */,
+				58DC4FC2298B433A00045B6E /* ProcStat.swift in Sources */,
 				5804C2E329809BAA00DE121A /* ContentView.swift in Sources */,
 				5804C2DE29809BAA00DE121A /* Persistence.swift in Sources */,
 			);
@@ -626,34 +653,26 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		58CCBA5D2989E59E00D4C41F /* XCRemoteSwiftPackageReference "JsonRPC.swift" */ = {
+		589C6CE2298A038B00D1DDC3 /* XCRemoteSwiftPackageReference "JsonRPC.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/tesseract-one/JsonRPC.swift.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.1;
-			};
-		};
-		58CCBA602989F27B00D4C41F /* XCRemoteSwiftPackageReference "Serializable.swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/tesseract-one/Serializable.swift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.2.3;
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		58CCBA5E2989E59E00D4C41F /* JsonRPC */ = {
+		589C6CE3298A038B00D1DDC3 /* JsonRPC */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 58CCBA5D2989E59E00D4C41F /* XCRemoteSwiftPackageReference "JsonRPC.swift" */;
+			package = 589C6CE2298A038B00D1DDC3 /* XCRemoteSwiftPackageReference "JsonRPC.swift" */;
 			productName = JsonRPC;
 		};
-		58CCBA612989F27B00D4C41F /* Serializable */ = {
+		589C6CE5298A038B00D1DDC3 /* JsonRPCSerializable */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 58CCBA602989F27B00D4C41F /* XCRemoteSwiftPackageReference "Serializable.swift" */;
-			productName = Serializable;
+			package = 589C6CE2298A038B00D1DDC3 /* XCRemoteSwiftPackageReference "JsonRPC.swift" */;
+			productName = JsonRPCSerializable;
 		};
 /* End XCSwiftPackageProductDependency section */
 

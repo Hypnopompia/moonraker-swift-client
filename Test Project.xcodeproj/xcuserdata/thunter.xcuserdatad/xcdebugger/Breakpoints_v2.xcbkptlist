@@ -3,4 +3,38 @@
    uuid = "44BCA7EC-C62B-4A84-BCC8-388E48E60824"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AD66E62D-941F-4FF7-B914-A1437BDECF06"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../../../Library/Developer/Xcode/DerivedData/Test_Project-dilmsfvgzdcxyjadcgrhjliofngv/SourcePackages/checkouts/JsonRPC.swift/Sources/RPC/Service/Service.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "delegate"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4A7F276C-A567-4D80-A98D-2573A442F0CD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../../../Library/Developer/Xcode/DerivedData/Test_Project-dilmsfvgzdcxyjadcgrhjliofngv/SourcePackages/checkouts/JsonRPC.swift/Sources/RPC/Service/PersistentService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "process(notification:data:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
