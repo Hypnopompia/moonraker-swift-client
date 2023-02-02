@@ -97,11 +97,17 @@ struct Test_ProjectApp: App {
 
         // However, I can still call it using callbacks, which isn't as cool.
         let params = CallParam(Empty()) // Use an empty params obj
+        
+        // These RPC calls need to be given a decodable struct. This allows the rpc client to decode json into your struct.
+        // I was passing in a simple String.self before and it would fail in decoding. These response types are in the Responses folder (ServerWebsocketId and ServerInfo)
+        // The error response is still String.self.
         rpc.call(method: "server.websocket.id", params: params, ServerWebsocketId.self, String.self) { res in
+            // should this be a guard?
             let websocketResponse = try! res.get()
             print("Websocket ID: " + String(websocketResponse.websocket_id))
         }
         rpc.call(method: "server.info", params: params, ServerInfo.self, String.self) { res in
+            // should this be a guard?
             let serverInfoResponse = try! res.get()
             print("Connected to moonraker version " + serverInfoResponse.moonrakerVersion)
         }
